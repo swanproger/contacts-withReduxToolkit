@@ -1,6 +1,6 @@
 import phone from "../img/phone.png"
 import user from "../img/user.png"
-export const User = ({name,surname,phonenumber, setHasError}) => {
+export const User = ({name,surname,phonenumber}) => {
    
     return(<li>
         <img src={user} alt="user" className="icon-user"></img>

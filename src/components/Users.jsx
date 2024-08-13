@@ -1,6 +1,7 @@
 import { User } from "./User";
-export const Users = ({ users,searchUser,onChangesearchUser }) => {
-  
+import {useSelector} from "react-redux";
+export const Users = ({searchUser,onChangesearchUser }) => {
+  const store = useSelector((store) => store.createUser);
   return (
     <>
     <div className="search-header">
@@ -12,9 +13,9 @@ export const Users = ({ users,searchUser,onChangesearchUser }) => {
       </div>
     </div>
       <ul className="user-list">
-        {users.lenght === 0
+        {store.users.lenght === 0
           ? ""
-          : users.filter((obj) => {
+          : store.users.filter((obj) => {
             const fullName = (obj.name + obj.surname).toLowerCase()
             return (fullName.includes(searchUser.toLowerCase()) || obj.phonenumber.includes(searchUser.toLowerCase()))
            

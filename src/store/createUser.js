@@ -7,6 +7,10 @@ const createUserSlice = createSlice({
         name: "",
         surname:"",
         phonenumber: "",
+        users: [{
+            name: "Артём",
+            surname: "Михайлов",
+            phonenumber: "89992822234",}]
     },
     reducers:{
         setdata(state, action){
@@ -15,7 +19,10 @@ const createUserSlice = createSlice({
                 [action.payload.name] : action.payload.value,
             }
         },
+        setusers(state, action){
+            state.users.push({name:state.name, surname:state.surname,phonenumber: state.phonenumber})
+        }
     }
 })
-export const {setdata} = createUserSlice.actions;
+export const {setdata,setusers} = createUserSlice.actions;
 export default createUserSlice.reducer;
