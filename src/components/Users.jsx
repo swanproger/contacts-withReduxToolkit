@@ -20,7 +20,7 @@ export const Users = ({searchUser,onChangesearchUser }) => {
             return (fullName.includes(searchUser.toLowerCase()) || obj.phonenumber.includes(searchUser.toLowerCase()))
            
              }).map((obj,index) => {
-              return <User key={index} {...obj}></User>;
+              return <User key={index} {...obj} id={index}></User>;
             })}
       </ul>
     </>

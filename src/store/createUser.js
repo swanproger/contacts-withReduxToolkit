@@ -20,8 +20,11 @@ const createUserSlice = createSlice({
         },
         setusers(state, action){
             state.users.push({name:state.name, surname:state.surname,phonenumber: state.phonenumber})
+        },
+        removeuser(state,action){
+            state.users = state.users.filter(user => user.id === action.payload.id)
         }
     }
 })
-export const {setdata,setusers} = createUserSlice.actions;
+export const {setdata,setusers, removeuser} = createUserSlice.actions;
 export default createUserSlice.reducer;

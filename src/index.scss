@@ -133,6 +133,7 @@ body {
       margin-left: 5px;
       
     }
+
   }
 }
 .contact-text{
@@ -141,4 +142,12 @@ body {
 }
 .icon-user{
   padding-top: 24px;
+}
+.delete{
+  float: right;
+  margin-top: 15px;
+  &:hover {
+    font-size: 25px;
+    cursor: pointer;
+  }
 }
