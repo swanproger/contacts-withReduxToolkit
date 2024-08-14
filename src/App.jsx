@@ -8,18 +8,12 @@ function App() {
   const dispatch = useDispatch();
   const [searchUser, setSearchUser] = useState("")
  
-/* const handleChange = (event) => {
-  const { name, value } = event.target;
-  setData((prevFormData) => ({
-    ...prevFormData,
-    [name]: value,
-}));} */
 const handleChange = (event) => {
-  const { name, value } = event.target;
+  const { name, value } = event.target; 
   dispatch(setdata({name, value}));
  ;}
 
-const onChangesearchUser = (event) => {
+const onChangesearchUser = (event) => { 
   setSearchUser(event.target.value)
 }
 const handleSendUsers = (e) => {
